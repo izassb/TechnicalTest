@@ -15,18 +15,6 @@ def find_possibilities(
         amount: int,
         index: int
 ):
-    """
-    This function returns the possibilites to make the change with the available coins.
-    For each coin in available coins it checks if the total value minus the coin value is greater than or equal to zero.
-    If so, the function will be called again, but the total amount will be subtracted from the value of the available coin.
-    This will be done with all available currencies to actually calculate what the possible change cases are.
-    :param possibilities: array of all possibilites
-    :param available_coins: coins available for use passed by the question
-    :param combinations: array of possibilites for each case
-    :param amount: dynamic amout to calculate the availability of each currency
-    :param index: index of available_coins array
-    :return: break the recursion to go back
-    """
     if amount == FINAL_STATE:
         possibilities.append(list(combinations))
         return
